@@ -1,3 +1,448 @@
+HTML (10 câu)
+HTML5 Semantic Elements là gì? Cho ví dụ.
+→ Trả lời: Thẻ mô tả rõ mục đích nội dung (ví dụ: <header>, <article>, <nav>). Giúp SEO tốt hơn và tăng khả năng truy cập.
+
+Sự khác biệt giữa id và class?
+→ Trả lời: id là duy nhất (1 phần tử/id), class dùng cho nhóm phần tử. CSS: #id vs .class.
+
+data-* attribute dùng để làm gì?
+→ Trả lời: Lưu dữ liệu tùy chỉnh trong DOM (ví dụ: <div data-user-id="123">). Truy cập qua JS: element.dataset.userId.
+
+Meta tag viewport quan trọng thế nào?
+→ Trả lời: <meta name="viewport" content="width=device-width, initial-scale=1"> → Responsive design trên mobile.
+
+Khi nào dùng <canvas> vs <svg>?
+→ Trả lời: <canvas> cho đồ họa động (game), <svg> cho đồ họa vector (icons, hình đơn giản).
+
+defer và async trong thẻ <script> khác nhau ra sao?
+→ Trả lời: Cả hai không chặn DOM. async tải và chạy ngay khi tải xong, defer chạy sau khi DOM sẵn sàng.
+
+CORS là gì?
+→ Trả lời: Cơ chế bảo mật trình duyệt ngăn truy cập tài nguyên từ domain khác. Server phải gửi header Access-Control-Allow-Origin.
+
+HTML Form: GET vs POST?
+→ Trả lời: GET gửi dữ liệu qua URL (dùng cho tìm kiếm), POST gửi qua body (dùng cho tạo/xóa dữ liệu).
+
+Local Storage vs Session Storage?
+→ Trả lời: Local Storage lưu vĩnh viễn, Session Storage mất khi đóng tab.
+
+Cách tối ưu hình ảnh trong HTML?
+→ Trả lời: Dùng định dạng WebP, thuộc tính loading="lazy", srcset cho responsive, nén ảnh.
+
+CSS (20 câu)
+CSS Box Model là gì?
+→ Trả lời: Gồm: content → padding → border → margin. box-sizing: border-box bao gồm padding/border trong width.
+
+Position: relative, absolute, fixed khác nhau thế nào?
+→ Trả lời:
+
+relative: Dịch chuyển từ vị trí gốc.
+
+absolute: Tuyệt đối so với phần tử cha gần nhất có position ≠ static.
+
+fixed: Tuyệt đối so với viewport.
+
+Flexbox vs Grid?
+→ Trả lời:
+
+Flexbox: 1 chiều (row hoặc column).
+
+Grid: 2 chiều (row + column). Dùng Grid cho layout phức tạp.
+
+BEM là gì? Ví dụ.
+→ Trả lời: Quy ước đặt tên class: .block__element--modifier (ví dụ: .menu__item--active).
+
+CSS Specificity tính thế nào?
+→ Trả lời: Độ ưu tiên: !important > inline style > #id > .class > element. Tính điểm: (0,0,0,0).
+
+em vs rem?
+→ Trả lời: em dựa trên font-size của phần tử cha, rem dựa trên font-size root (<html>).
+
+Media Query viết thế nào?
+→ Trả lời:
+
+css
+@media (max-width: 768px) { ... } /* Mobile */
+CSS Variable là gì?
+→ Trả lời: Khai báo: :root { --color: red; }, sử dụng: color: var(--color);.
+
+Cách center một phần tử?
+→ Trả lời:
+
+css
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+Pseudo-class :nth-child() dùng thế nào?
+→ Trả lời: Chọn phần tử con thứ n (ví dụ: :nth-child(2n) chọn phần tử chẵn).
+
+CSS Reset vs Normalize.css?
+→ Trả lời: Reset xóa style mặc định, Normalize.css chuẩn hóa style giữa trình duyệt.
+
+z-index hoạt động ra sao?
+→ Trả lời: Kiểm soát thứ tự chồng lớp. Chỉ hoạt động với position ≠ static.
+
+CSS Selector A > B vs A B?
+→ Trả lời: A > B: con trực tiếp, A B: mọi phần tử B bên trong A.
+
+Transition vs Animation?
+→ Trả lời: Transition cho hiệu ứng đơn giản (hover), Animation cho hiệu ứng phức tạp với @keyframes.
+
+Cách ẩn phần tử?
+→ Trả lời:
+
+display: none: Xóa khỏi layout.
+
+visibility: hidden: Ẩn nhưng vẫn chiếm chỗ.
+
+opacity: 0: Trong suốt nhưng tương tác được.
+
+Float trong CSS dùng để làm gì?
+→ Trả lời: Canh trái/phải phần tử, thường dùng cho bố cục cũ. Hiện đại dùng Flex/Grid.
+
+overflow: hidden có tác dụng gì ngoài ẩn nội dung?
+→ Trả lời: Tạo BFC (Block Formatting Context) → ngăn margin collapse.
+
+Sự khác biệt giữa inline và inline-block?
+→ Trả lời: inline không đặt width/height, inline-block có thể.
+
+CSS Preprocessor (SASS/LESS) ưu điểm gì?
+→ Trả lời: Biến, nested rules, mixins, functions → code ngắn gọn hơn.
+
+Responsive Design vs Adaptive Design?
+→ Trả lời: Responsive dùng media query (1 code cho mọi device), Adaptive dùng server detect device để trả layout riêng.
+
+JavaScript (30 câu)
+let, const, var khác nhau thế nào?
+→ Trả lời:
+
+var: function-scoped, hoisting.
+
+let/const: block-scoped, không hoisting.
+
+const không gán lại được.
+
+Closure là gì? Cho ví dụ.
+→ Trả lời: Hàm truy cập biến ngoài phạm vi nó. Ví dụ:
+
+javascript
+function outer() {
+  let x = 10;
+  return function inner() { console.log(x); };
+}
+this trong JavaScript?
+→ Trả lời: Giá trị this phụ thuộc vào ngữ cảnh:
+
+Hàm thường: this = global (window/undefined trong strict mode).
+
+Arrow function: this từ scope ngoài.
+
+Method: this = object gọi hàm.
+
+Promise là gì?
+→ Trả lời: Xử lý bất đồng bộ. Có 3 trạng thái: pending, fulfilled, rejected. Dùng .then(), .catch().
+
+Async/Await khác Promise thế nào?
+→ Trả lời: Async/await là syntax sugar cho Promise, giúp code đồng bộ hơn. Ví dụ:
+
+javascript
+async function fetchData() {
+  const data = await fetch(url);
+}
+Event Bubbling và Capturing?
+→ Trả lời:
+
+Bubbling: Sự kiện lan từ trong ra ngoài.
+
+Capturing: Lan từ ngoài vào trong.
+Dùng e.stopPropagation() để dừng.
+
+Cách tạo object trong JS?
+→ Trả lời:
+
+javascript
+// 1. Object literal
+const obj = { key: "value" };
+
+// 2. Constructor
+function Person(name) { this.name = name; }
+map() vs forEach()?
+→ Trả lời: map() trả về mảng mới, forEach() không trả về gì.
+
+=== vs ==?
+→ Trả lời: === so sánh giá trị và kiểu dữ liệu, == chỉ so giá trị (chuyển đổi kiểu).
+
+Arrow function và regular function?
+→ Trả lời: Arrow function không có this, arguments, không dùng làm constructor.
+
+null vs undefined?
+→ Trả lời: undefined là biến chưa gán giá trị, null là giá trị rỗng cố ý.
+
+Event Loop là gì?
+→ Trả lời: Cơ chế xử lý bất đồng bộ: Call Stack → Callback Queue → Event Loop đẩy vào Stack khi rỗng.
+
+Cách clone object?
+→ Trả lời:
+
+javascript
+const shallowCopy = { ...obj };
+const deepCopy = JSON.parse(JSON.stringify(obj));
+call(), apply(), bind() khác nhau?
+→ Trả lời:
+
+call(thisArg, arg1, arg2): Gọi hàm với this mới.
+
+apply(thisArg, [args]): Tương tự nhưng nhận mảng.
+
+bind(thisArg): Trả về hàm mới với this bị ràng buộc.
+
+typeof và instanceof?
+→ Trả lời: typeof trả kiểu dữ liệu, instanceof kiểm tra object thuộc class nào.
+
+Các phương thức mảng thường dùng?
+→ Trả lời: push(), pop(), slice(), splice(), find(), filter(), reduce().
+
+Debounce vs Throttle?
+→ Trả lời:
+
+Debounce: Gọi hàm sau khi dừng event X ms (ví dụ: search input).
+
+Throttle: Gọi hàm mỗi X ms (ví dụ: scroll).
+
+localStorage vs sessionStorage vs Cookie?
+→ Trả lời:
+
+Cookie: Lưu 4KB, gửi lên server.
+
+localStorage: Lưu 5-10MB, không hết hạn.
+
+sessionStorage: Hết khi đóng tab.
+
+ES6 Modules?
+→ Trả lời:
+
+javascript
+// Export
+export const foo = () => {};
+
+// Import
+import { foo } from './module.js';
+Template Literals?
+→ Trả lời: Dùng backtick `Hello ${name}` để chèn biến và multi-line string.
+
+Rest và Spread operator?
+→ Trả lời:
+
+javascript
+// Rest: Gom thành mảng
+function sum(...args) { }
+
+// Spread: Giải mảng/object
+const arr2 = [...arr1];
+CORS giải quyết thế nào?
+→ Trả lời:
+
+Server trả header Access-Control-Allow-Origin: *.
+
+Dùng proxy hoặc JSONP (cũ).
+
+fetch() vs axios?
+→ Trả lời: fetch() có sẵn trong trình duyệt, axios là thư viện hỗ trợ cancel request, timeout.
+
+Strict mode là gì?
+→ Trả lời: "use strict": Ngăn lỗi phổ biến (vd: biến chưa khai báo), bật tính năng mới.
+
+setTimeout() và setInterval()?
+→ Trả lời: setTimeout() chạy 1 lần, setInterval() lặp lại.
+
+Callback hell là gì?
+→ Trả lời: Callback lồng nhau gây khó đọc. Giải quyết bằng Promise/async-await.
+
+IIFE là gì?
+→ Trả lời: Immediately Invoked Function Expression:
+
+javascript
+(function() { console.log("IIFE"); })();
+Object.keys() vs Object.entries()?
+→ Trả lời:
+
+Object.keys(obj): Trả mảng keys.
+
+Object.entries(obj): Trả mảng [key, value].
+
+Sự kiện DOMContentLoaded vs load?
+→ Trả lời:
+
+DOMContentLoaded: DOM sẵn sàng (chưa load ảnh).
+
+load: Mọi tài nguyên (ảnh, CSS) đã tải xong.
+
+Memoization là gì?
+→ Trả lời: Kỹ thuật cache kết quả hàm để tối ưu hiệu năng (dùng cho hàm tốn CPU).
+
+React (20 câu)
+Virtual DOM là gì?
+→ Trả lời: Bản sao JS của DOM thật. React so sánh Virtual DOM trước/sau khi thay đổi → cập nhật DOM thật tối thiểu.
+
+Sự khác biệt giữa state và props?
+→ Trả lời:
+
+Props: Dữ liệu từ cha → con (read-only).
+
+State: Dữ liệu nội bộ component (thay đổi bằng setState/useState).
+
+Component Lifecycle trong class component?
+→ Trả lời:
+
+Mounting: constructor → render → componentDidMount.
+
+Updating: shouldComponentUpdate → render → componentDidUpdate.
+
+Unmounting: componentWillUnmount.
+
+Hooks là gì?
+→ Trả lời: Cho phép dùng state, lifecycle trong functional component (ví dụ: useState, useEffect).
+
+useEffect dùng thế nào?
+→ Trả lời: Xử lý side effect (call API, subscriptions). Có thể mô phỏng componentDidMount, componentDidUpdate, componentWillUnmount.
+
+Conditional rendering trong React?
+→ Trả lời: Dùng if, &&, hoặc ternary operator:
+
+jsx
+{isLoggedIn && <UserPanel />}
+Keys trong list quan trọng thế nào?
+→ Trả lời: Giúp React xác định phần tử thay đổi → tối ưu render. Dùng giá trị unique (id).
+
+Sự khác biệt giữa controlled và uncontrolled component?
+→ Trả lời:
+
+Controlled: Form data quản lý bởi React state.
+
+Uncontrolled: Form data quản lý bởi DOM (dùng useRef).
+
+Lifting State Up là gì?
+→ Trả lời: Di chuyển state lên component cha gần nhất để chia sẻ state giữa các component con.
+
+Context API dùng để làm gì?
+→ Trả lời: Truyền dữ liệu xuyên component mà không cần prop drilling (vd: theme, user data).
+
+Cách tối ưu hiệu năng React?
+→ Trả lời:
+
+React.memo() cho functional component.
+
+useMemo, useCallback để memoize.
+
+Code splitting.
+
+Redux là gì?
+→ Trả lời: Thư viện quản lý state toàn cục. Luồng: Action → Reducer → Store → View.
+
+JSX là gì?
+→ Trả lời: Cú pháp giống HTML trong JS, được Babel biên dịch thành React.createElement().
+
+Các cách styling trong React?
+→ Trả lời: Inline style, CSS module, Styled Components, Sass.
+
+Server-Side Rendering (SSR) vs Client-Side Rendering (CSR)?
+→ Trả lời:
+
+SSR: Render HTML trên server → tốt cho SEO.
+
+CSR: Render trên trình duyệt → tương tác mượt hơn.
+
+Custom Hook là gì?
+→ Trả lời: Hàm tái sử dụng logic có sử dụng hooks (tên bắt đầu bằng use).
+
+useRef dùng thế nào?
+→ Trả lời: Lưu giá trị tồn tại giữa các lần render, không gây re-render. Thường dùng truy cập DOM.
+
+Error Boundary trong React?
+→ Trả lời: Component bắt lỗi trong cây con, hiển thị UI dự phòng. Dùng componentDidCatch.
+
+PropTypes là gì?
+→ Trả lời: Kiểm tra kiểu dữ liệu props:
+
+javascript
+Component.propTypes = { name: PropTypes.string.isRequired }
+React Router dùng thế nào?
+→ Trả lời: Quản lý routing:
+
+jsx
+<Route path="/about" element={<About />} />
+Chung & Best Practices (20 câu)
+Web Accessibility (a11y) là gì?
+→ Trả lời: Thiết kế web dùng được cho người khuyết tật. Cách: dùng semantic HTML, ARIA attributes, keyboard navigation.
+
+SEO cơ bản cho Frontend?
+→ Trả lời: Meta tags, semantic HTML, tối ưu hình ảnh, server-side rendering, tốc độ tải.
+
+CORS hoạt động thế nào?
+→ Trả lời: Trình duyệt gửi OPTIONS request để kiểm tra server có cho phép domain hiện tại không.
+
+HTTP/2 ưu điểm gì?
+→ Trả lời: Multiplexing (nhiều request trên 1 kết nối), header compression, server push.
+
+Cookie attributes: Secure, HttpOnly, SameSite?
+→ Trả lời:
+
+Secure: Chỉ gửi qua HTTPS.
+
+HttpOnly: Chặn JS truy cập.
+
+SameSite: Chống CSRF.
+
+CSRF là gì? Phòng chống?
+→ Trả lời: Tấn công giả mạo request. Cách chống: Dùng CSRF token, cookie SameSite=Strict.
+
+XSS là gì? Phòng chống?
+→ Trả lời: Tấn công chèn mã độc. Cách chống: Escape user input, dùng Content-Security-Policy.
+
+Các công cụ debug Frontend?
+→ Trả lời: Chrome DevTools, React DevTools, Redux DevTools, ESLint.
+
+Tree Shaking là gì?
+→ Trả lời: Kỹ thuật loại code không dùng khi build (vd: Webpack).
+
+Lazy loading là gì?
+→ Trả lời: Tải tài nguyên (ảnh, component) khi cần. React: React.lazy(), ảnh: loading="lazy".
+
+Critical Rendering Path là gì?
+→ Trả lời: Quá trình trình duyệt chuyển HTML/CSS/JS thành pixels trên màn hình. Tối ưu bằng minimize render-blocking resources.
+
+FOUC là gì? Cách khắc phục?
+→ Trả lời: "Flash of Unstyled Content": Hiện trang chưa load CSS. Khắc phục: load CSS trước, hoặc dùng inline CSS.
+
+WebSockets vs HTTP?
+→ Trả lời: WebSocket kết nối hai chiều real-time (chat), HTTP chỉ request-response.
+
+Progressive Web App (PWA) là gì?
+→ Trả lời: Web app có tính năng native: offline (service workers), push notification, installable.
+
+Server-Sent Events (SSE)?
+→ Trả lời: Cơ chế server gửi sự kiện đến client qua HTTP (1 chiều).
+
+Web Workers dùng để làm gì?
+→ Trả lời: Chạy script trên luồng nền → tránh block main thread.
+
+Các phương pháp tối ưu hình ảnh?
+→ Trả lời: Nén ảnh (TinyPNG), dùng WebP/AVIF, responsive images (srcset), lazy loading.
+
+Bundle size tối ưu thế nào?
+→ Trả lời: Code splitting, tree shaking, minify, gzip, dùng thư viện nhẹ.
+
+Feature Detection vs Browser Sniffing?
+→ Trả lời:
+
+Feature Detection: Kiểm tra trình duyệt hỗ trợ tính năng không (dùng if('feature' in window)).
+
+Browser Sniffing: Kiểm tra user-agent → không khuyến khích.
+
+CORS-safe HTTP methods?
+→ Trả lời: GET, HEAD, POST không yêu cầu preflight. PUT, DELETE yêu cầu preflight.
 New structure:
 - HTML: 20 câu
 - CSS: 20 câu
