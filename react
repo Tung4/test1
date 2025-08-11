@@ -1,1 +1,53 @@
 
+### I. Cách hoạt động của trang web
+1. Khi bạn gõ một URL vào trình duyệt và nhấn Enter, những gì xảy ra đằng sau? (Chi tiết từ DNS, TCP, HTTP request, rendering...)
+2. Trình duyệt hiển thị một trang web như thế nào? (Quá trình parsing HTML, CSS, xây dựng DOM, CSSOM, Render Tree, Layout, Paint, Composite)
+3. Giải thích về sự kiện `DOMContentLoaded` và `load`. Sự khác biệt giữa chúng?
+4. Critical Rendering Path là gì? Làm thế nào để tối ưu nó?
+5. Cơ chế caching của trình duyệt hoạt động như thế nào? (Cache-Control, ETag, v.v.)
+### II. Xử lý bất đồng bộ, Event loop, Microtasks
+1. Giải thích cơ chế Event Loop trong JavaScript.
+2. Sự khác biệt giữa Macrotask và Microtask? Cho ví dụ.
+3. Thứ tự thực thi của các tác vụ: setTimeout, setImmediate, process.nextTick (nếu là Node.js), Promise.
+4. Async/Await hoạt động như thế nào dưới dạng Promise và generator?
+5. Xử lý lỗi trong bất đồng bộ: cách bắt lỗi với async/await và Promise.
+### III. React (SPA vs MPA)
+1. Sự khác nhau giữa Single Page Application (SPA) và Multi Page Application (MPA)? Ưu và nhược điểm của mỗi loại.
+2. Khi nào nên sử dụng SPA và khi nào nên sử dụng MPA?
+3. Các thách thức của SPA (SEO, hiệu năng, v.v.) và cách giải quyết?
+4. Server-Side Rendering (SSR) và Static Site Generation (SSG) là gì? Chúng giải quyết vấn đề gì trong React?
+5. So sánh các framework React-based như Next.js, Gatsby.js, Remix trong việc hỗ trợ SSR và SSG.
+### IV. Bản chất cách React hoạt động
+1. React hoạt động như thế nào? (Mô tả kiến trúc tổng quan)
+2. Tại sao React sử dụng JSX? JSX được biên dịch thành gì?
+3. React Component và React Element khác nhau như thế nào?
+4. Tại sao React lại có khái niệm "Component-based"?
+### V. Virtual DOM & Reconciliation
+1. Virtual DOM là gì? Tại sao React sử dụng Virtual DOM?
+2. Reconciliation là gì? Mô tả quá trình Reconciliation trong React.
+3. React xử lý việc cập nhật DOM như thế nào? (Diffing algorithm)
+4. Key trong React dùng để làm gì? Tại sao nó quan trọng trong danh sách?
+### VI. So sánh render sync vs concurrent (React 18)
+1. React 18 giới thiệu cơ chế render mới nào? Concurrent Rendering là gì?
+2. Sự khác biệt giữa Legacy Mode (Sync) và Concurrent Mode?
+3. Ưu điểm của Concurrent Mode? (như ưu tiên tác vụ, ngắt render, v.v.)
+4. Các API mới trong React 18 hỗ trợ Concurrent Features? (useTransition, useDeferredValue, Suspense)
+5. Suspense là gì? Nó hoạt động như thế nào?
+### VII. React fiber và scheduler
+1. Kiến trúc Fiber trong React là gì? Tại sao nó được giới thiệu?
+2. Fiber node là gì? Cấu trúc của một Fiber node?
+3. Scheduler trong React hoạt động như thế nào? (Cơ chế điều phối tác vụ)
+4. Làm thế nào React Fiber cho phép ngắt và tiếp tục công việc?
+### VIII. React hooks (useMemo, useCallback, useEffect, useImperativeHandle,...)
+1. React Hooks là gì? Tại sao chúng được giới thiệu?
+2. Khi nào nên sử dụng `useMemo` và `useCallback`? Có phải lúc nào cũng nên dùng?
+3. `useEffect` hoạt động như thế nào? Lifecycle của nó ra sao?
+4. Làm thế nào để tránh các lỗi phổ biến với `useEffect`? (Ví dụ: dependency array, cleanup)
+5. `useRef` dùng để làm gì? Khác gì với `useState`?
+6. `useImperativeHandle` dùng trong trường hợp nào? Cho ví dụ.
+7. Cách xây dựng custom hook? Những quy tắc cần nhớ khi viết hook?
+8. Giải thích về Rules of Hooks? Tại sao không được gọi hook trong điều kiện, vòng lặp?
+### Câu hỏi tổng hợp và thực hành
+1. Giải thích cách tối ưu hiệu năng trong React ứng dụng? (Memoization, lazy loading, code splitting, v.v.)
+2. Làm thế nào để xử lý state management trong ứng dụng React lớn? (Redux, Context API, Zustand, v.v.)
+3. Làm thế nào để test React components? (Các công cụ và thư viện phổ biến)
